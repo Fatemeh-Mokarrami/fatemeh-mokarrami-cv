@@ -537,7 +537,7 @@
         <div class="flex flex-col gap-2">
           <span class="font-bold text-sm text-on-surface">پروفایل‌های نمایه‌شده</span>
           <ul class="flex flex-col gap-1.5 text-xs text-on-surface-variant">
-            <li><a href="https://orcid.org" target="_blank" class="hover:text-secondary">ORCID: 0009-0009-5106-1501</a></li>
+           <li><a href="https://orcid.org/0009-0009-5106-1501" target="_blank" rel="noopener noreferrer" class="hover:text-secondary">ORCID: 0009-0009-5106-1501</a></li>
             <li><a href="https://scholar.google.com" target="_blank" class="hover:text-secondary">Google Scholar Profile</a></li>
             <li><a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" class="hover:text-secondary">PubMed Index</a></li>
           </ul>
@@ -549,7 +549,7 @@
         </div>
       </div>
       <div class="pt-6 border-t border-slate-100 text-center text-xs text-slate-500">
-        © ۱۴۰۳ فاطمه مکررمی (Fatemeh Mokarrami Jozei). تمام حقوق محفوظ است.
+        © ۱۴۰۳ فاطمه مکرمی (Fatemeh Mokarrami). تمام حقوق محفوظ است.
       </div>
     </div>
   </footer>
