@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="light">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>محصولات سلامت دیجیتال، کتب و نوآوری‌ها | فاطمه مکررمی</title>
+  <meta name="description" content="محصولات هوش مصنوعی سلامت، دستگاه‌های نوین پزشکی ثبت اختراع شده، کتب و ترجمه‌های تخصصی فاطمه مکررمی با امکان ثبت سفارش مستقیم تلگرام"/>
+  <meta property="og:title" content="محصولات سلامت دیجیتال، کتب و نوآوری‌ها | فاطمه مکررمی"/>
+  <meta property="og:description" content="ClickNote، BabyNose، کوله زرد و کتب پزشکی تالیف و ترجمه شده با قابلیت سفارش مستقیم تلگرامی"/>
+  <meta property="og:type" content="website"/>
+
+  <!-- Google Fonts: Vazirmatn for Persian, Newsreader & Plus Jakarta Sans for Latin -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN for Drag & Drop deployment -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#006860",
+            "primary-hover": "#00504a",
+            "primary-fixed": "#90f4e9",
+            "on-primary-fixed": "#00201d",
+            secondary: "#2b5cad",
+            "secondary-hover": "#1e4482",
+            "secondary-fixed": "#d8e2ff",
+            "on-secondary-fixed": "#001a41",
+            surface: "#f7f9fb",
+            "surface-lowest": "#ffffff",
+            "surface-low": "#f2f4f6",
+            "surface-container": "#eceef0",
+            "surface-container-high": "#e0e3e5",
+            "on-surface": "#191c1e",
+            "on-surface-variant": "#3d4947",
+            outline: "#6d7a77",
+            "outline-variant": "#bdc9c6",
+          },
+          fontFamily: {
+            fa: ["Vazirmatn", "system-ui", "sans-serif"],
+            serif: ["Newsreader", "serif"],
+            sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body class="bg-surface font-fa text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 w-full z-50 glass-nav shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+      
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-xl sm:text-2xl text-secondary tracking-tight">فاطمه مکررمی</span>
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-semibold">
+              <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              <span>MD Candidate</span>
+            </span>
+          </div>
+          <span class="text-xs text-on-surface-variant font-medium mt-0.5">محصولات سلامت دیجیتال و انتشارات بالینی</span>
+        </a>
+      </div>
+
+      <nav class="hidden lg:flex items-center gap-1 bg-surface-low/80 p-1.5 rounded-xl border border-surface-container">
+        <a href="index.html" class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-white/70 transition-colors text-sm">صفحه اصلی</a>
+        <a href="about.html" class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-white/70 transition-colors text-sm">درباره و سوابق علمی</a>
+        <a href="products.html" class="px-3.5 py-1.5 rounded-lg text-secondary font-bold bg-secondary-fixed/50 transition-colors text-sm">محصولات و نوآوری‌ها</a>
+        <a href="products.html#books" class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-white/70 transition-colors text-sm">کتب و ترجمه‌ها</a>
+        <a href="contact.html" class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-white/70 transition-colors text-sm">تماس و سفارش تلگرام</a>
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Direct Telegram Order Action -->
+        <button onclick="openTelegramOrder('استعلام کلی محصولات و کتب', 'سفارش تلگرام')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#229ED9] hover:bg-[#1a85b8] text-white text-xs font-bold transition-all shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          <span>سفارش سریع تلگرامی</span>
+        </button>
+
+        <button id="mobileMenuBtn" aria-label="منوی موبایل" class="lg:hidden p-2 rounded-xl bg-surface-low text-on-surface hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileMenuOverlay" class="fixed inset-0 bg-black/40 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <aside id="mobileMenuDrawer" class="fixed top-0 right-0 bottom-0 w-72 bg-white z-50 shadow-2xl p-6 flex flex-col justify-between translate-x-full transition-transform duration-300">
+    <div class="flex flex-col gap-6">
+      <div class="flex items-center justify-between border-b border-surface-container pb-4">
+        <div class="flex flex-col">
+          <span class="font-bold text-lg text-secondary">فاطمه مکررمی</span>
+          <span class="text-xs text-on-surface-variant">محصولات و کتب پزشکی</span>
+        </div>
+        <button id="closeMobileMenuBtn" class="p-1 rounded-lg text-on-surface-variant hover:bg-surface-low">
+          <span class="material-symbols-outlined text-[24px]">close</span>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-2">
+        <a href="index.html" class="px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-low text-sm font-medium">صفحه اصلی</a>
+        <a href="about.html" class="px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-low text-sm font-medium">درباره و سوابق علمی</a>
+        <a href="products.html" class="px-3.5 py-2.5 rounded-xl bg-secondary-fixed/50 text-secondary font-bold text-sm">محصولات و نوآوری‌ها</a>
+        <a href="products.html#books" class="px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-low text-sm font-medium">کتب و ترجمه‌ها</a>
+        <a href="contact.html" class="px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-low text-sm font-medium">تماس و سفارش تلگرام</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-surface-container flex flex-col gap-2">
+      <button onclick="openTelegramOrder('استعلام از منوی موبایل', 'سفارش تلگرام')" class="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#229ED9] text-white text-xs font-bold shadow-sm">
+        <span>ثبت سفارش در تلگرام</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Container -->
+  <main class="w-full pt-20">
+
+    <!-- Hero Banner -->
+    <section class="relative w-full bg-gradient-to-b from-secondary-fixed/20 via-surface to-surface pt-10 pb-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-fixed/50 text-secondary">
+            <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            <span class="text-xs font-bold uppercase tracking-wider">CLINICAL TRANSLATION, VENTURES & MONOGRAPHS</span>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-on-surface-variant">
+            <span class="inline-flex items-center gap-1 font-bold text-primary">
+              <span class="material-symbols-outlined text-[16px]">verified</span>
+              <span>آماده ثبت سفارش مستقیم تلگرام</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-8">
+          <div class="lg:col-span-8 flex flex-col gap-3">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-secondary tracking-tight">
+              محصولات سلامت دیجیتال، اختراعات و کتب تألیفی
+            </h1>
+            <p class="text-base sm:text-lg text-on-surface-variant max-w-3xl leading-relaxed">
+              کاتالوگ جامع نوآوری‌های بالینی، اسپین‌آف‌های هوش مصنوعی سلامت، دستگاه‌های ارگونومیک نوزادان، و دستنامه‌های پزشکی بالینی ترجمه و تألیف‌شده توسط فاطمه مکررمی.
+            </p>
+          </div>
+          
+          <div class="lg:col-span-4 flex flex-col gap-2">
+            <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs flex items-center justify-between">
+              <div>
+                <span class="text-[11px] text-slate-500 font-semibold block">سفارش و تحویل سریع</span>
+                <span class="text-sm font-bold text-secondary">پشتیبانی تلگرام ۲۴ ساعته</span>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-[#229ED9]/15 text-[#229ED9] text-xs font-bold">@fatemeh_mokarrami</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metric Badges Row -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="p-4 rounded-xl bg-white border border-slate-200/80 shadow-xs card-hover">
+            <div class="flex items-center justify-between mb-2">
+              <span class="material-symbols-outlined text-secondary text-[26px]">smart_toy</span>
+              <span class="text-[11px] font-bold text-secondary bg-secondary-fixed/50 px-2 py-0.5 rounded-full">AI Spin-Out</span>
+            </div>
+            <div class="text-2xl font-extrabold text-secondary">ClickNote</div>
+            <div class="text-xs text-on-surface-variant mt-0.5">مستندسازی بالینی با صوت فارسی</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-white border border-slate-200/80 shadow-xs card-hover">
+            <div class="flex items-center justify-between mb-2">
+              <span class="material-symbols-outlined text-primary text-[26px]">medical_services</span>
+              <span class="text-[11px] font-bold text-primary bg-primary-fixed/40 px-2 py-0.5 rounded-full">Hardware</span>
+            </div>
+            <div class="text-2xl font-extrabold text-secondary">BabyNose</div>
+            <div class="text-xs text-on-surface-variant mt-0.5">پتنت دستگاه ساکشن نوزادان</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-white border border-slate-200/80 shadow-xs card-hover">
+            <div class="flex items-center justify-between mb-2">
+              <span class="material-symbols-outlined text-amber-700 text-[26px]">menu_book</span>
+              <span class="text-[11px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full">4 کتب بالینی</span>
+            </div>
+            <div class="text-2xl font-extrabold text-secondary">۵ مونوگراف</div>
+            <div class="text-xs text-on-surface-variant mt-0.5">کتب اخلاق، طب اطفال و کانادا</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-white border border-slate-200/80 shadow-xs card-hover">
+            <div class="flex items-center justify-between mb-2">
+              <span class="material-symbols-outlined text-secondary text-[26px]">hub</span>
+              <span class="text-[11px] font-bold text-secondary bg-secondary-fixed/50 px-2 py-0.5 rounded-full">۱,۲۰۰+ عضو</span>
+            </div>
+            <div class="text-2xl font-extrabold text-secondary">SETUP</div>
+            <div class="text-xs text-on-surface-variant mt-0.5">کنسرسیوم پژوهشی دانشجویی</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 1: Digital Health & Medical Device Ventures (3 Products) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="mb-8">
+        <span class="text-xs font-bold uppercase tracking-wider text-primary block">CLINICAL TRANSLATION & COMMERCIALIZATION</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-secondary mt-1">محصولات سلامت دیجیتال و تجهیزات پزشکی</h2>
+        <p class="text-xs text-on-surface-variant mt-1">پاسخ به ناکارآمدی‌های عینی بالین بیمار با ابزارهای هوش مصنوعی کاربردی و تجهیزات زیست‌پزشکی.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Product 1: ClickNote -->
+        <article class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs card-hover flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-secondary"></div>
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-bold">
+                رتبه دوم کشوری تکتون ۱۴۰۴
+              </span>
+              <span class="material-symbols-outlined text-secondary text-[24px]">record_voice_over</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-secondary">کلیک‌نوت (ClickNote)</h3>
+            <span class="text-xs font-bold text-primary block mt-0.5">Physician Clinical Documentation AI</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5">هم‌بنیان‌گذار، سهام‌دار و معمار ارشد بالینی</span>
+
+            <p class="text-xs text-on-surface-variant mt-3 leading-relaxed text-justify">
+              موتور هوش بالینی امبینت (Ambient Clinical Intelligence) جهت تبدیل مکالمات چندنفره پزشک و بیمار به زبان فارسی به یادداشت‌های ساختاریافته SOAP و کدهای تشخیصی ICD-10. این سیستم با کاهش ۶۸ درصدی زمان ثبت اسناد، فرسودگی شغلی پزشکان را به طور چشمگیری تخفیف می‌دهد.
+            </p>
+
+            <!-- Tech Spec Pill -->
+            <div class="mt-4 p-3 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center justify-between text-xs">
+              <div class="flex flex-col">
+                <span class="text-[10px] text-slate-500 uppercase font-bold">TECHTON HONOR</span>
+                <span class="font-bold text-secondary">نشان نقره ملی نوآوری سلامت</span>
+              </div>
+              <span class="material-symbols-outlined text-secondary text-[24px]">military_tech</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex flex-col gap-2">
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-primary font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">verified</span>
+                <span>Fine-Tuned LLM • Speech Diarization</span>
+              </span>
+              <span class="font-bold text-secondary">آماده دمو</span>
+            </div>
+            <button onclick="openTelegramOrder('درخواست دمو و اطلاعات تکمیلی ClickNote', 'محصول هوش مصنوعی')" class="w-full mt-2 py-2.5 rounded-xl bg-secondary hover:bg-secondary-hover text-white text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-xs">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+              <span>سفارش یا درخواست دموی ClickNote در تلگرام</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Product 2: BabyNose -->
+        <article class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs card-hover flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-primary"></div>
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold">
+                Hardware Prototype & Patent
+              </span>
+              <span class="material-symbols-outlined text-primary text-[24px]">medical_services</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-secondary">بیبی‌نوز (BabyNose)</h3>
+            <span class="text-xs font-bold text-primary block mt-0.5">Neonatal Airway Care Device</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5">هم‌بنیان‌گذار و مدیر طراحی بالینی</span>
+
+            <p class="text-xs text-on-surface-variant mt-3 leading-relaxed text-justify">
+              دستگاه ساکشن ارگونومیک و تخلیه غیرتهاجمی مجاری تنفسی نوزادان نارس جهت جلوگیری از ترومای مخاطی مجاری هوایی در حین احیای بحرانی در بخش‌های نوزادان و NICU. مدل‌سازی گردش کار بالینی، شبیه‌سازی دینامیک سیالات و پرونده ثبت اختراع پزشکی انجام شده است.
+            </p>
+
+            <div class="mt-4 p-3 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center justify-between text-xs">
+              <div class="flex flex-col">
+                <span class="text-[10px] text-slate-500 uppercase font-bold">ENTITY STATUS</span>
+                <span class="font-bold text-primary">اسپین‌آف ثبت‌شده مد‌تک (MedTech)</span>
+              </div>
+              <span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex flex-col gap-2">
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-primary font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">precision_manufacturing</span>
+                <span>Biocompatible Polymer • Pediatric Safety</span>
+              </span>
+              <span class="font-bold text-primary">پتنت اختراع</span>
+            </div>
+            <button onclick="openTelegramOrder('استعلام مشخصات و همکاری تجهیز BabyNose', 'تجهیزات پزشکی')" class="w-full mt-2 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-xs">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+              <span>استعلام پتنت و تولید BabyNose در تلگرام</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Product 3: Kooleh Zard -->
+        <article class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs card-hover flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-amber-500"></div>
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">
+                Pediatric M-Health Platform
+              </span>
+              <span class="material-symbols-outlined text-amber-600 text-[24px]">backpack</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-secondary">کوله زرد (Kooleh Zard)</h3>
+            <span class="text-xs font-bold text-primary block mt-0.5">"Yellow Backpack" Child Care Platform</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5">مبتکر و طراح ارشد توسعه بالینی</span>
+
+            <p class="text-xs text-on-surface-variant mt-3 leading-relaxed text-justify">
+              پلتفرم درمان دیجیتال گیمیفای‌شده و سامانه خودمراقبتی مستقر در بخش‌های انکولوژی و مزمن کودکان. این پلتفرم اضطراب و استرس ناشی از بستری بیمارستانی را کاهش داده، پایبندی به رژیم درمانی را تقویت می‌کند و ماژول‌های سواد سلامت متناسب با سن کودک ارائه می‌دهد.
+            </p>
+
+            <div class="mt-4 p-3 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center justify-between text-xs">
+              <div class="flex flex-col">
+                <span class="text-[10px] text-slate-500 uppercase font-bold">DEPLOYMENT TARGET</span>
+                <span class="font-bold text-amber-700">بخش‌های انکولوژی کودکان بیمارستانی</span>
+              </div>
+              <span class="material-symbols-outlined text-amber-600 text-[24px]">child_care</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex flex-col gap-2">
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-secondary font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">health_and_safety</span>
+                <span>Digital Behavioral Health • UX Oncology</span>
+              </span>
+              <span class="font-bold text-secondary">طرح فعال</span>
+            </div>
+            <button onclick="openTelegramOrder('درخواست استقرار یا همکاری پلتفرم کوله زرد', 'سلامت دیجیتال اطفال')" class="w-full mt-2 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-xs">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+              <span>درخواست دسترسی به کوله زرد در تلگرام</span>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Section 2: Authored Books & Translated Clinical Monographs (4 Books with Direct Ordering) -->
+    <section id="books" class="w-full bg-slate-50/80 py-14 border-t border-slate-200/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+          <div>
+            <div class="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-primary font-bold mb-1">
+              <span class="material-symbols-outlined text-[16px]">menu_book</span>
+              <span>PEDIATRIC & BIOETHICAL PUBLICATIONS</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-secondary">
+              کتب تألیفی و ترجمه‌های بالینی
+            </h2>
+          </div>
+          <p class="text-xs text-on-surface-variant max-w-md">
+            دستنامه‌های معتبر بالینی، ترجمه کریکولوم‌های بین‌المللی طب اطفال و کتب تخصصی اخلاق بر بالین بیمار. سفارش سریع نسخه چاپی و دانلودی با پشتیبانی تلگرام.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Book 1: Step-by-Step Medicine in Canada -->
+          <div class="bg-white rounded-2xl p-5 shadow-xs border border-slate-200/80 card-hover flex flex-col justify-between">
+            <div>
+              <div class="w-full h-48 rounded-xl bg-slate-100 mb-4 overflow-hidden relative group">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC19HhGlvGlPw3bsYiXEir6HwzGB11trXCa6oRwykBWQy3CpjPjSimvRA-jnBb_ZR9TPa6MXbd7TE6NTp5svnUjgCXalpKsjlG85WthPE6BdnpImlkuGCFx3nE9QQZMcV3-6ZI27fWVhZqy1sH4wtRB3gYVSDyn0GjB7wqSlL47H2zHA5uq7ReJ0g2IrGgK7RljeYIj30FiSlMnEijhm7H0QE1TIRJ10OaM-7mtmVLi1SA9wcicqDvj" alt="کتاب گام به گام پزشکی در کانادا" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+                <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-white/95 text-[11px] font-bold text-secondary shadow-xs">
+                  انتشارات NGO PAK
+                </span>
+              </div>
+              <span class="text-[11px] font-bold text-primary block mb-0.5">Medical Education Handbook</span>
+              <h3 class="text-base font-bold text-secondary mb-1">گام به گام پزشکی در کانادا</h3>
+              <p class="text-xs font-semibold text-slate-600 mb-2 font-sans">Step-by-Step Medicine in Canada</p>
+              <p class="text-xs text-on-surface-variant leading-relaxed text-justify mb-4">
+                دستنامه جامع کریکولوم پزشکی، آزمون‌های صلاحیت لایسنسینگ کانادا (MCCQE) و راهنمای هدایت پرونده‌های رزیدنتی برای پزشکان و پژوهشگران بین‌المللی.
+              </p>
+            </div>
+            
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+              <div class="flex items-center justify-between text-xs text-on-surface-variant">
+                <span>همکار مؤلف و ویراستار</span>
+                <span class="text-secondary font-bold">نسخه رسمی منتشر شده</span>
+              </div>
+              <button onclick="openTelegramOrder('کتاب گام به گام پزشکی در کانادا', 'کتاب تألیفی')" class="w-full mt-2 py-2 rounded-xl bg-secondary hover:bg-secondary-hover text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5 shadow-xs">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                <span>سفارش کتاب در تلگرام</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Book 2: Nelson Textbook of Pediatrics Translation -->
+          <div class="bg-white rounded-2xl p-5 shadow-xs border border-slate-200/80 card-hover flex flex-col justify-between">
+            <div>
+              <div class="w-full h-48 rounded-xl bg-slate-100 mb-4 overflow-hidden relative group">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2GqQ8yqiapE1GbklBLhoryD2v7FMjacVpx7oqDOEBCDCeCbkQc4DEER5uDT9OY3qX0jcVfX39qFnxpdREtnEM52F0crVagX-ere6L1jN5kA-fX_CGl5pH_5dTZ1-DyQVZaqjnKNjno5sK-m0ZelHOsA6rh5DfW0a3tBY-gKnVYUxwVXOxcSvLktsUnEzINTTx7klQu_I0csliwaIdaKq79kYAUD4jpI0nL6CPv4bnXK-zrL9eQYgI" alt="ترجمه طب تسکینی کودکان نلسون" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+                <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-white/95 text-[11px] font-bold text-primary shadow-xs">
+                  مرجع بالینی نلسون
+                </span>
+              </div>
+              <span class="text-[11px] font-bold text-primary block mb-0.5">Core Clinical Translation</span>
+              <h3 class="text-base font-bold text-secondary mb-1">طب تسکینی کودکان نلسون</h3>
+              <p class="text-xs font-semibold text-slate-600 mb-2 font-sans">Nelson Textbook of Pediatrics</p>
+              <p class="text-xs text-on-surface-variant leading-relaxed text-justify mb-4">
+                ترجمه رسمی بخش طب تسکینی اطفال و مدیریت تسکین علائم در مراحل پایانی حیات، از معتبرترین کتاب مرجع بین‌المللی طب کودکان.
+              </p>
+            </div>
+            
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+              <div class="flex items-center justify-between text-xs text-on-surface-variant">
+                <span>مترجم رسمی تخصصی</span>
+                <span class="text-primary font-bold">استاندارد بالینی</span>
+              </div>
+              <button onclick="openTelegramOrder('ترجمه طب تسکینی کودکان نلسون', 'کتاب مرجع ترجمه')" class="w-full mt-2 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5 shadow-xs">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                <span>سفارش ترجمه در تلگرام</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Book 3: Practical Clinical Ethics at the Bedside -->
+          <div class="bg-white rounded-2xl p-5 shadow-xs border border-slate-200/80 card-hover flex flex-col justify-between">
+            <div>
+              <div class="w-full h-48 rounded-xl bg-slate-100 mb-4 overflow-hidden relative group">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHxj0Udmh4YCdNm7zOmfDh1zRF5417phLFvzKI-94t_O4WBXerA1ZuW0b2ZVa4e31OMCUWtvGEo-Cxb97qC9AbIGRxvC8qAtV2Dxja5FywbTz1drCzB6ZpJA-nO5h99Bhrx0t19qCR0yY88B9SL3BYkb95vmV9IJJhsEbBcvQd2kC-l3ixl-gPsvv-eDTu0KtNRbhZrF87DziCB2KqYpdq_VPvh9lTXdoIm9hUaNUEOSfciRhlgqEF" alt="راهنمای کاربردی اخلاق بالینی" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+                <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-white/95 text-[11px] font-bold text-secondary shadow-xs">
+                  CHU Sainte-Justine
+                </span>
+              </div>
+              <span class="text-[11px] font-bold text-primary block mb-0.5">Bioethics Field Guide</span>
+              <h3 class="text-base font-bold text-secondary mb-1">اخلاق بالینی بر بالین بیمار</h3>
+              <p class="text-xs font-semibold text-slate-600 mb-2 font-sans">Chevet: Guide Pratique d'Éthique</p>
+              <p class="text-xs text-on-surface-variant leading-relaxed text-justify mb-4">
+                ترجمه تخصصی از زبان فرانسوی بر مبنای راهنمای کاربردی بیمارستان سنت‌ژوستین مونترال، تدوین‌شده برای چالش‌های اخلاقی بخش‌های نوزادان و مراقبت‌های ویژه.
+              </p>
+            </div>
+            
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+              <div class="flex items-center justify-between text-xs text-on-surface-variant">
+                <span>مترجم ارشد از فرانسه</span>
+                <span class="text-secondary font-bold">پروتکل بیمارستانی</span>
+              </div>
+              <button onclick="openTelegramOrder('کتاب راهنمای اخلاق بالینی بر بالین بیمار', 'کتاب اخلاق پزشکی')" class="w-full mt-2 py-2 rounded-xl bg-secondary hover:bg-secondary-hover text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5 shadow-xs">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                <span>سفارش نسخه در تلگرام</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Book 4: Traditional & Alternative Medicine Ethics -->
+          <div class="bg-white rounded-2xl p-5 shadow-xs border border-slate-200/80 card-hover flex flex-col justify-between">
+            <div>
+              <div class="w-full h-48 rounded-xl bg-slate-100 mb-4 overflow-hidden relative group">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbaUekeqaJhcpuUolbDJmG5TIHpIUIgKjhyvvf6zC9CNhgv0PzpJtI9-jWZOeGnJ1H1MuJRZQBHstLZE-e85W0F7nBVIpyrfH9zQKRPwHoU_4_yqb0AjIHIf5-RrBSb6-75oofsMNGh_cLHU9ZFpGlqzFzmjnd7dyyPeSACpsHfDiyGpFdicbVjsnW6RZ1w-_wDIPO7Jc3KkBzUTnJbFbEAj1xBa8PicSMXjOMssxqK38cf7xdq9q0" alt="اخلاق در طب سنتی و مکمل اطفال" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+                <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-white/95 text-[11px] font-bold text-primary shadow-xs">
+                  نظارت دکتر کدیور
+                </span>
+              </div>
+              <span class="text-[11px] font-bold text-primary block mb-0.5">Authored Book Chapter</span>
+              <h3 class="text-base font-bold text-secondary mb-1">اخلاق در طب سنتی و مکمل اطفال</h3>
+              <p class="text-xs font-semibold text-slate-600 mb-2 font-sans">Ethical Challenges in Alternative Pediatrics</p>
+              <p class="text-xs text-on-surface-variant leading-relaxed text-justify mb-4">
+                تألیف فصل کتاب مرجع اخلاق پزشکی در خصوص تعارضات اخلاقی میان درمان‌های انکولوژی متعارف و طب مکمل در بیماری‌های دشواردرمان کودکان تحت نظارت دکتر کدیور.
+              </p>
+            </div>
+            
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+              <div class="flex items-center justify-between text-xs text-on-surface-variant">
+                <span>مؤلف فصل کتاب مرجع</span>
+                <span class="text-secondary font-bold">انتشارات دانشگاهی</span>
+              </div>
+              <button onclick="openTelegramOrder('فصل کتاب مرجع اخلاق در طب سنتی و مکمل اطفال', 'کتاب مرجع تخصصی')" class="w-full mt-2 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5 shadow-xs">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                <span>سفارش دسترسی در تلگرام</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 3: SETUP Network Consortium & SVG Topology (Stitch Screen 3 Highlight) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="rounded-3xl bg-gradient-to-br from-[#f8fbff] via-white to-[#e8f6f1]/40 border border-slate-200 p-6 sm:p-10 shadow-sm overflow-hidden relative">
+        <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-secondary via-primary to-primary-fixed"></div>
+
+        <div class="flex flex-col lg:flex-row gap-8 items-start justify-between">
+          
+          <div class="flex-1 space-y-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold">Flagship Academic Enterprise</span>
+              <span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-semibold">کنسرسیوم پژوهشی نخبگان</span>
+            </div>
+
+            <div>
+              <div class="flex items-baseline gap-3">
+                <h2 class="text-3xl font-extrabold text-secondary">شبکه تعالی SETUP</h2>
+                <span class="text-sm text-slate-500 font-sans">Student Excellence Toward Universal Progress</span>
+              </div>
+              <p class="text-sm text-on-surface-variant mt-2 leading-relaxed text-justify">
+                دموکراتیزه کردن آموزش متدولوژی پژوهش‌های بالینی، سواد پیشرفته آمار زیستی و استانداردهای مرور سیستماتیک PRISMA-2020 برای دانشجویان پزشکی دانشگاه‌های کشور.
+              </p>
+            </div>
+
+            <!-- Mandate Box -->
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="flex items-center gap-2 text-primary font-bold text-xs">
+                <span class="material-symbols-outlined text-[18px]">badge</span>
+                <span>مسئولیت اجرایی: فاطمه مکررمی</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1.5 leading-relaxed">
+                مدیر اجرایی و هدایت‌کننده پروژه‌های آکادمیک: رهبری تدوین کریکولوم biostatistical pipelines، انعقاد تفاهم‌نامه‌های بین‌دانشگاهی و راهبری ۱۸ اسپرینت فشرده متاآنالیز همگام.
+              </p>
+            </div>
+
+            <!-- Metrics -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+              <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-center">
+                <span class="text-2xl font-extrabold text-secondary font-sans">1,200+</span>
+                <span class="text-[11px] text-slate-500 block mt-0.5">پژوهشگر آموزش‌دیده</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-center">
+                <span class="text-2xl font-extrabold text-primary font-sans">14</span>
+                <span class="text-[11px] text-slate-500 block mt-0.5">دانشکده پزشکی همکار</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-center">
+                <span class="text-2xl font-extrabold text-secondary font-sans">8</span>
+                <span class="text-[11px] text-slate-500 block mt-0.5">پروتکل PRISMA ثبت‌شده</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-center">
+                <span class="text-2xl font-extrabold text-primary font-sans">40+</span>
+                <span class="text-[11px] text-slate-500 block mt-0.5">پژوهشگر ارشد فعال</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Consortium Architecture SVG -->
+          <div class="w-full lg:w-80 shrink-0 p-4 rounded-2xl bg-white border border-slate-200 shadow-xs flex flex-col gap-3">
+            <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+              <span class="text-xs font-bold text-secondary uppercase font-sans">CONSORTIUM TOPOLOGY</span>
+              <span class="text-[11px] font-bold text-primary flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span> Live Sync
+              </span>
+            </div>
+
+            <div class="w-full py-2 flex items-center justify-center">
+              <svg class="w-full h-auto text-secondary" fill="none" stroke="currentColor" viewBox="0 0 280 180">
+                <circle cx="140" cy="90" fill="#EAF3FF" r="26" stroke="#2B5CAD" stroke-width="2"></circle>
+                <text fill="#001A41" font-family="Plus Jakarta Sans" font-size="9" font-weight="bold" text-anchor="middle" x="140" y="93">SETUP HUB</text>
+                
+                <circle cx="45" cy="45" fill="#E8F6F1" r="16" stroke="#006860" stroke-width="1.5"></circle>
+                <text fill="#00201D" font-family="Plus Jakarta Sans" font-size="7" text-anchor="middle" x="45" y="47">Tehran</text>
+                <line stroke="#BDC9C6" stroke-dasharray="3 3" x1="61" x2="117" y1="52" y2="78"></line>
+                
+                <circle cx="235" cy="40" fill="#E8F6F1" r="16" stroke="#006860" stroke-width="1.5"></circle>
+                <text fill="#00201D" font-family="Plus Jakarta Sans" font-size="7" text-anchor="middle" x="235" y="42">Shahed</text>
+                <line stroke="#BDC9C6" stroke-dasharray="3 3" x1="220" x2="162" y1="48" y2="79"></line>
+                
+                <circle cx="50" cy="140" fill="#EAF3FF" r="16" stroke="#2B5CAD" stroke-width="1.5"></circle>
+                <text fill="#001A41" font-family="Plus Jakarta Sans" font-size="7" text-anchor="middle" x="50" y="142">Shiraz</text>
+                <line stroke="#BDC9C6" stroke-dasharray="3 3" x1="64" x2="118" y1="131" y2="103"></line>
+                
+                <circle cx="230" cy="135" fill="#EAF3FF" r="16" stroke="#2B5CAD" stroke-width="1.5"></circle>
+                <text fill="#001A41" font-family="Plus Jakarta Sans" font-size="7" text-anchor="middle" x="230" y="137">Isfahan</text>
+                <line stroke="#BDC9C6" stroke-dasharray="3 3" x1="216" x2="162" y1="126" y2="102"></line>
+              </svg>
+            </div>
+
+            <div class="space-y-1.5 text-xs text-on-surface-variant pt-1 border-t border-slate-100">
+              <div class="flex items-center justify-between">
+                <span>Rigor Standards:</span>
+                <span class="text-primary font-bold">PRISMA-2020</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Statistical Suite:</span>
+                <span class="text-secondary font-bold">R, Jamovi, RevMan</span>
+              </div>
+            </div>
+
+            <button onclick="openTelegramOrder('درخواست عضویت یا تاسیس شعبه در شبکه تعالی SETUP', 'همکاری پژوهشی')" class="w-full py-2 rounded-xl bg-secondary/10 hover:bg-secondary/20 text-secondary text-xs font-bold transition-colors mt-2 text-center">
+              درخواست همکاری با شبکه SETUP
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 4: Humanitarian Medical Actions & Community Relief -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 border-t border-slate-200/60">
+      <div class="mb-8">
+        <span class="text-xs font-bold uppercase tracking-wider text-secondary block">SOCIAL ACCOUNTABILITY & RELIEF</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-secondary mt-1">خدمات بشردوستانه و تله‌مدیسین جهادی</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Kazemi Ashtiani (8 cols) -->
+        <div class="lg:col-span-8 p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold">۱۵ اردوی جهادی درمانی تخصصی</span>
+              <span class="text-xs text-primary font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">verified</span> Rural Health Triage
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-secondary">گروه پزشکی جهادی شهید کاظمی آشتیانی</h3>
+            <span class="text-xs font-bold text-primary block mt-1">مدیر برنامه «سکوی رشد» و هماهنگ‌کننده ارشد اعزام بالینی</span>
+            <p class="text-xs text-on-surface-variant mt-3 leading-relaxed text-justify">
+              مدیریت درمانگاه‌های سیار تخصصی در ۱۵ اردوی مناطق محروم استان‌های سیستان و بلوچستان، خوزستان و حاشیه استان تهران. سازمان‌دهی تریاژ اولیه، توزیع دارویی و خطوط غربالگری متابولیک و انگلی اطفال.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 p-4 rounded-xl bg-slate-50">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-[28px]">diversity_3</span>
+                <div>
+                  <span class="text-lg font-bold text-secondary font-sans">66</span>
+                  <span class="text-xs text-slate-500 block">پزشک و کادر درمان تحت هدایت</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-secondary text-[28px]">health_and_safety</span>
+                <div>
+                  <span class="text-lg font-bold text-secondary font-sans">4,500+</span>
+                  <span class="text-xs text-slate-500 block">ویزیت تخصصی و تریاژ بیماران</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span>تمرکز ویژه بر تریاژ سلامت مادر و کودک و غربالگری بیماری‌های متابولیک</span>
+            <span class="text-primary font-bold">دارای تاییدیه رسمی سرپرستی</span>
+          </div>
+        </div>
+
+        <!-- Telemedicine & Advocacy (4 cols) -->
+        <div class="lg:col-span-4 flex flex-col gap-6">
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs flex-1 flex flex-col justify-between">
+            <div>
+              <span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-bold">تله‌مدیسین مهاجرین</span>
+              <h4 class="text-base font-bold text-secondary mt-2">پزشکان مهربان (Pezeshkan-e Mehraban)</h4>
+              <span class="text-[11px] text-slate-500 block">همکاری تله‌تریاژ • سازمان مردم‌نهاد PAK</span>
+              <p class="text-xs text-on-surface-variant mt-2 leading-relaxed">
+                تریاژ علائم و راهبری بالینی از راه دور ۲۴ ساعته برای مهاجرین و پناهندگان فارسی‌زبان در شبکه درمانی استانی کانادا (۱۸۰+ ویزیت موفق).
+              </p>
+            </div>
+            <div class="mt-3 pt-2 border-t border-slate-100 text-xs text-secondary font-bold">
+              ۱۸۰+ بیمار تحت پوشش از راه دور
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs flex-1 flex flex-col justify-between">
+            <div>
+              <span class="px-2.5 py-0.5 rounded-full bg-red-100 text-red-800 text-xs font-bold">بیانیه بحران</span>
+              <h4 class="text-base font-bold text-secondary mt-2">بیانیه مشترک بحران MoHME و UNICEF</h4>
+              <span class="text-[11px] text-slate-500 block">همکار نگارش بیانیه رسمی به زبان انگلیسی</span>
+              <p class="text-xs text-on-surface-variant mt-2 leading-relaxed">
+                نگارش مستندات معتبر آکادمیک و بشردوستانه بالینی به زبان انگلیسی برای ناظرین بین‌المللی در خصوص وقایع کلینیکی شجره طیبه.
+              </p>
+            </div>
+            <div class="mt-3 pt-2 border-t border-slate-100 text-xs text-red-700 font-bold">
+              تطابق با اخلاق پزشکی بین‌المللی
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Telegram Ordering Modal Component (Shared) -->
+  <div id="telegramOrderModal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-xs p-4">
+    <div class="modal-content bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 flex flex-col gap-4 relative">
+      <button id="closeTelegramModalBtn" class="absolute top-5 left-5 text-slate-400 hover:text-slate-700 p-1 rounded-lg">
+        <span class="material-symbols-outlined text-[24px]">close</span>
+      </button>
+
+      <div class="flex items-center gap-3 border-b border-slate-100 pb-4">
+        <div class="w-11 h-11 rounded-2xl bg-[#229ED9]/15 text-[#229ED9] flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-base text-secondary">ثبت درخواست و سفارش مستقیم در تلگرام</h3>
+          <span id="orderProductBadge" class="text-xs text-primary font-semibold block mt-0.5">سفارش محصول</span>
+        </div>
+      </div>
+
+      <p class="text-xs text-on-surface-variant leading-relaxed">
+        پس از تکمیل این فرم، پیام درخواست به شکل استاندارد به تلگرام رسمی ارسال می‌شود و در سریع‌ترین زمان ممکن پاسخ داده خواهد شد.
+      </p>
+
+      <form id="telegramOrderForm" class="flex flex-col gap-3">
+        <input type="hidden" id="orderProductName" value="سفارش محصول"/>
+
+        <div>
+          <label class="block text-xs font-bold text-on-surface mb-1">نام متقاضی یا مرکز درمانی</label>
+          <input type="text" id="customerName" required placeholder="نام کامل شما یا نام بیمارستان / کلینیک" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-[#229ED9]/50 bg-slate-50"/>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-on-surface mb-1">شماره تماس یا آیدی تلگرام</label>
+          <input type="text" id="customerPhone" required placeholder="0912... یا @your_username" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-[#229ED9]/50 bg-slate-50 font-mono text-left"/>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-on-surface mb-1">تعداد یا نوع خدمت درخواستی</label>
+          <input type="text" id="orderQuantity" placeholder="مثال: ۱ نسخه چاپی کتاب / تقاضای دموی محصول / جلسه همکاری" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-[#229ED9]/50 bg-slate-50"/>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-on-surface mb-1">یادداشت و سوالات شما</label>
+          <textarea id="customerNotes" rows="2" placeholder="اگر توضیح یا آدرس پستی جهت ارسال کتاب مدنظر است بنویسید..." class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-[#229ED9]/50 bg-slate-50"></textarea>
+        </div>
+
+        <div class="pt-2 flex items-center justify-end gap-2 border-t border-slate-100">
+          <button type="button" id="cancelTelegramModalBtn" class="px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-600 hover:bg-slate-100">انصراف</button>
+          <button type="submit" class="px-5 py-2.5 rounded-xl bg-[#229ED9] hover:bg-[#1a85b8] text-white text-xs font-bold shadow-md transition-all flex items-center gap-1.5">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            <span>انتقال مستقیم به تلگرام و ارسال سفارش</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w-full bg-white border-t border-slate-200 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div class="flex flex-col gap-2">
+          <span class="font-bold text-lg text-secondary">فاطمه مکررمی</span>
+          <p class="text-xs text-on-surface-variant leading-relaxed">
+            محصولات سلامت دیجیتال، کتب و مونوگراف‌های پزشکی و مدیریت اختراعات بالینی.
+          </p>
+        </div>
+        <div class="flex flex-col gap-2">
+          <span class="font-bold text-sm text-on-surface">صفحات وب‌سایت</span>
+          <nav class="flex flex-col gap-1.5 text-xs text-on-surface-variant">
+            <a href="index.html" class="hover:text-secondary">صفحه اصلی</a>
+            <a href="about.html" class="hover:text-secondary">سوابق علمی و تحصیلی</a>
+            <a href="products.html" class="hover:text-secondary">محصولات سلامت دیجیتال</a>
+            <a href="contact.html" class="hover:text-secondary">تماس و سفارش تلگرام</a>
+          </nav>
+        </div>
+        <div class="flex flex-col gap-2">
+          <span class="font-bold text-sm text-on-surface">شناسه‌های بین‌المللی</span>
+          <ul class="flex flex-col gap-1.5 text-xs text-on-surface-variant">
+            <li><a href="https://orcid.org" target="_blank" class="hover:text-secondary">ORCID: 0009-0009-5106-1501</a></li>
+            <li><a href="https://scholar.google.com" target="_blank" class="hover:text-secondary">Google Scholar Profile</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" class="hover:text-secondary">PubMed Author Index</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-2">
+          <span class="font-bold text-sm text-on-surface">پشتیبانی تلگرام</span>
+          <p class="text-xs text-on-surface-variant leading-relaxed">برای استعلام سریع و سفارش کتب به آیدی تلگرام پیام دهید.</p>
+          <a href="https://t.me/fatemeh_mokarrami" target="_blank" class="inline-flex items-center gap-1.5 text-xs text-[#229ED9] font-bold mt-1">
+            <span>ارتباط در تلگرام: @fatemeh_mokarrami</span>
+          </a>
+        </div>
+      </div>
+      <div class="pt-6 border-t border-slate-100 text-center text-xs text-slate-500">
+        © ۱۴۰۳ فاطمه مکررمی (Fatemeh Mokarrami Jozei). تمام حقوق محفوظ است.
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
